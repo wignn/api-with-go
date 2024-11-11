@@ -1,4 +1,4 @@
-module github.com/wignn/Native
+module github.com/wignn/api-with-go
 
 go 1.22.1
 

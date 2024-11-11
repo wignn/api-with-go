@@ -2,7 +2,7 @@ package repositories
 
 import (
 	"context"
-	"github.com/wignn/Native/models"
+	"github.com/wignn/api-with-go/models"
 	"gorm.io/gorm"
 )
 

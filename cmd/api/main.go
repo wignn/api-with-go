@@ -3,12 +3,12 @@ package main
 import (
 	"fmt"
 	"github.com/gofiber/fiber/v2"
-	"github.com/wignn/Native/config"
-	"github.com/wignn/Native/db"
-	"github.com/wignn/Native/handlers"
-	"github.com/wignn/Native/middlewares"
-	"github.com/wignn/Native/repositories"
-	"github.com/wignn/Native/services"
+	"github.com/wignn/api-with-go/config"
+	"github.com/wignn/api-with-go/db"
+	"github.com/wignn/api-with-go/handlers"
+	"github.com/wignn/api-with-go/middlewares"
+	"github.com/wignn/api-with-go/repositories"
+	"github.com/wignn/api-with-go/services"
 )
 
 func main() {

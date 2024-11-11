@@ -8,7 +8,7 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/log"
 	"github.com/golang-jwt/jwt/v5"
-	"github.com/wignn/Native/models"
+	"github.com/wignn/api-with-go/models"
 	"gorm.io/gorm"
 )
 

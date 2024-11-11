@@ -7,8 +7,8 @@ import (
 	"os"
 	"time"
 	"github.com/golang-jwt/jwt/v5"
-	"github.com/wignn/Native/models"
-	"github.com/wignn/Native/utils"
+	"github.com/wignn/api-with-go/models"
+	"github.com/wignn/api-with-go/utils"
 	"golang.org/x/crypto/bcrypt"
 	"gorm.io/gorm"
 )

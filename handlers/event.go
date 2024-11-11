@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"time"
 	"github.com/gofiber/fiber/v2"
-		"github.com/wignn/Native/models"
+		"github.com/wignn/api-with-go/models"
 )
 
 type EventHandler struct {

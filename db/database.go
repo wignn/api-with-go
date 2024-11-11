@@ -3,7 +3,7 @@ package db
 import (
 	"fmt"
 	"github.com/gofiber/fiber/v2/log"
-	"github.com/wignn/Native/config"
+	"github.com/wignn/api-with-go/config"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"

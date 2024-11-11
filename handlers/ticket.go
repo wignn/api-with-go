@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/gofiber/fiber/v2"
 	"github.com/skip2/go-qrcode"
-	"github.com/wignn/Native/models"
+	"github.com/wignn/api-with-go/models"
 	"strconv"
 	"time"
 )
