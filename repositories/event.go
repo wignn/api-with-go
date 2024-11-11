@@ -2,7 +2,7 @@ package repositories
 
 import (
 	"context"
-	"github.com/mathvaillant/ticket-booking-project-v0/models"
+	"github.com/wignn/Native/models"
 	"gorm.io/gorm"
 )
 

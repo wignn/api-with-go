@@ -6,7 +6,7 @@ import (
 	"time"
 	"github.com/go-playground/validator/v10"
 	"github.com/gofiber/fiber/v2"
-	"github.com/mathvaillant/ticket-booking-project-v0/models"
+	"github.com/wignn/Native/models"
 )
 
 var validate = validator.New()

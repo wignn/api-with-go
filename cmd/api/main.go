@@ -2,14 +2,13 @@ package main
 
 import (
 	"fmt"
-
 	"github.com/gofiber/fiber/v2"
-	"github.com/mathvaillant/ticket-booking-project-v0/config"
-	"github.com/mathvaillant/ticket-booking-project-v0/db"
-	"github.com/mathvaillant/ticket-booking-project-v0/handlers"
-	"github.com/mathvaillant/ticket-booking-project-v0/middlewares"
-	"github.com/mathvaillant/ticket-booking-project-v0/repositories"
-	"github.com/mathvaillant/ticket-booking-project-v0/services"
+	"github.com/wignn/Native/config"
+	"github.com/wignn/Native/db"
+	"github.com/wignn/Native/handlers"
+	"github.com/wignn/Native/middlewares"
+	"github.com/wignn/Native/repositories"
+	"github.com/wignn/Native/services"
 )
 
 func main() {

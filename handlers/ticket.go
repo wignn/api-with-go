@@ -3,11 +3,11 @@ package handlers
 import (
 	"context"
 	"fmt"
+	"github.com/gofiber/fiber/v2"
+	"github.com/skip2/go-qrcode"
+	"github.com/wignn/Native/models"
 	"strconv"
 	"time"
-	"github.com/gofiber/fiber/v2"
-	"github.com/mathvaillant/ticket-booking-project-v0/models"
-	"github.com/skip2/go-qrcode"
 )
 
 type TicketHandler struct {

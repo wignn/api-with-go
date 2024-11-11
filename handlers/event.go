@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"time"
 	"github.com/gofiber/fiber/v2"
-	"github.com/mathvaillant/ticket-booking-project-v0/models"
+		"github.com/wignn/Native/models"
 )
 
 type EventHandler struct {
