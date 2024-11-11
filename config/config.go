@@ -1,33 +1,32 @@
 package config
 
 import (
-	"log"
 	"github.com/caarlos0/env"
+	"github.com/gofiber/fiber/v2/log"
 	"github.com/joho/godotenv"
 )
 
 type EnvConfig struct {
-	ServerPort string `env:"SERVER_PORT reguired"`
-	DBHost     string `env:"DB_HOST reguired"`
-	DBName     string `env:"DB_NAME reguired"`
-	DBUser     string `env:"DB_USER reguired"`
-	DBPassword string `env:"DB_PASS reguired"`
-	DBSSLmode  string `env:"DB_SSL reguired"`
+	ServerPort string `env:"SERVER_PORT,required"`
+	DBHost     string `env:"DB_HOST,required"`
+	DBName     string `env:"DB_NAME,required"`
+	DBUser     string `env:"DB_USER,required"`
+	DBPassword string `env:"DB_PASSWORD,required"`
+	DBSSLMode  string `env:"DB_SSLMODE,required"`
 }
 
 func NewEnvConfig() *EnvConfig {
 	err := godotenv.Load()
 
 	if err != nil {
-		log.Fatal("Error loading .env file")
+		log.Fatalf("Unable to load .env: %e", err)
 	}
 
 	config := &EnvConfig{}
 
 	if err := env.Parse(config); err != nil {
-		log.Fatalf("Error parsing .env file")
+		log.Fatalf("Unable to load variables from .env: %e", err)
 	}
 
 	return config
-
 }

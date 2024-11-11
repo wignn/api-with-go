@@ -1,14 +1,14 @@
-version: '3.9'
+version: "3.9"
 
 services:
   app:
     tty: true
     restart: always
-    image: Native
-    container_name: Native
+    image: native-api
+    container_name: native-api
     build: .
     ports:
-      - "3000:3000"
+      - 8081:8081
     env_file:
       - .env
     networks:
@@ -19,31 +19,30 @@ services:
     volumes:
       - .:/src/app
     command: air -c .air.toml
-
+  
   db:
     image: postgres:alpine
-    container_name: NativeDB
-    restart: always
+    container_name: native-db
     environment:
+      - POSTGRES_HOST=${DB_HOST}
+      - POSTGRES_DB=${DB_NAME}
       - POSTGRES_USER=${DB_USER}
       - POSTGRES_PASSWORD=${DB_PASSWORD}
-      - POSTGRES_DB=${DB_NAME}
-      - POSTGRES_HOST=${DB_HOST}
     ports:
-      - "5432:5432"
+      - 5432:5432
     volumes:
-      - postgres_db:/var/lib/postgresql/data
+      - postgres-db:/var/lib/postgresql/data
     networks:
       - application
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${DB_USER}"]
-      interval: 1m30s
-      timeout: 30s
+      interval: 10s
+      timeout: 5s
       retries: 5
-      start_period: 30s
 
 networks:
   application:
 
 volumes:
-  postgres_db:
+  postgres-db:
+
